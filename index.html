@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">	
+	<script type="text/javascript" src="index.js"></script>
+	<title>Le jeu de la vie</title>
+</head>
+<body>
+	
+	<div id="app">
+		<h1>Jeu de la vie</h1>
+		<h2>Règles : <br/>| 1. Une cellule vivante possédant deux ou trois voisines vivantes le reste, sinon elle meurt. |<br/>| 2. Une cellule morte possédant exactement trois voisines vivantes devient vivante. |<br/>| Tour : <span id="nbTour" class="red">0</span> |</h2><br/>
+		<div id="menuGrille">
+
+			<h2>Taille de la grille (Nombre de cases)</h2>
+			<label>Nombre de ligne : </label><input style="width:50px" type="text" 
+			id="nbLigne" value="23"><br/>
+			<label>Nombre de colonne : </label><input style="width:50px" type="text" 
+			id="nbColonne" value="36"><br/><br/>
+			<input type="button" value="Valider" onclick="creerGrille()">
+
+		</div>
+		<table id="boxesApp"></table><br/>
+		<div id="menuJeu" style="display: none;">
+			<h2>Menu</h2>
+			<input id="buttonNextTour" type="button" value="Tour suivant" onclick="lancerSimu()">
+			<input id="buttonAuto"  type="button" value="Auto/Stop" onclick="autoSimu()">
+			<label id="autoOn"></label>
+			<input id="buttonClear"  type="button" value="Clear" onclick="clearGrille()">
+			<input id="buttonMasquerGrille"  type="button" value="Masquer/Afficher Grille" 
+			onclick="masquerGrille()">
+
+			<input type="button" value="Vitesse +" onclick="vitessePlus()">
+			<input type="button" value="Vitesse -" onclick="vitesseMoins()">
+			<span id="idVitesse"></span>
+
+			<br/><br/>
+			<h2>Exemples</h2>
+
+			<input type="button" value="Canon à planeurs" onclick="exCanon()">
+			<input type="button" value="Planeur" onclick="exPlaneur()">
+			<input type="button" value="Clignotant" onclick="exClignotant()">
+			<input type="button" value="4 Clignotants" onclick="ex4Clignotant()">		
+			<input type="button" value="Ruche" onclick="exRuche()">
+			<input type="button" value="4 Ruches" onclick="ex4Ruche()">
+			<input type="button" value="Oie du Canada" onclick="exOieCanada()">
+
+		</div>
+	</div>
+
+</body>
+</html>

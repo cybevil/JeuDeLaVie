@@ -1,0 +1,49 @@
+* {
+	margin: 5px;
+	padding: 0px;
+}
+
+table {
+        border-spacing: 0px;
+}
+
+input {
+	margin: 7px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+.blackBorder {
+	border: white solid 0.1px;
+}
+
+.whiteBorder {
+	border: black solid 0.1px;
+}
+
+.blackBG {
+	background-color: black;
+}
+
+.whiteBG {
+	background-color: white;
+}
+
+.red {
+	color: red;
+}
+
+.blackBorder, .whiteBorder {
+	border-right: none;
+	border-top: none;
+}
+
+.whiteBorder:last-child {
+	border-right: black solid 0.1px;
+}
+
+.whiteBorder.boxesL1 {
+	border-top: black solid 0.1px;
+}
